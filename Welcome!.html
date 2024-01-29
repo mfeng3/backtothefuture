@@ -1,0 +1,222 @@
+
+<head>
+  <style>
+    body {
+        background-image: url(background1.png); 
+        background-size:cover; 
+        background-position:top; 
+        background-repeat:initial; 
+        height: 100vh; 
+        padding: 0;    /* 重置页面的内边距 */
+        overflow-x: hidden;
+        margin: 0; 
+        
+    }
+</style>
+</head>
+
+<style>
+  audio::-webkit-media-controls-start-playback-button,
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+audio::-webkit-media-controls {
+  display: none !important;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
+</style>
+
+<style>
+   @keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* 给按钮添加动画效果 */
+.custom-play-button {
+  position: absolute;
+  width: 50px; /* 自定义按钮宽度 */
+  height: 50px; /* 自定义按钮高度 */
+  background: url('audio.png') no-repeat center center; /* 替换为您的播放按钮图片路径 */
+  background-size: cover;
+  cursor: pointer;
+  left: 1360px;
+  top: 30px;
+  animation: rotateAnimation 3s steps(100) infinite; /* 设置动画效果，2s表示动画时长，infinite表示无限循环 */
+  transition: filter 0.1s;
+}
+.custom-play-button:hover {
+  filter: brightness(0.8);
+}
+</style>
+
+
+<audio id="customAudio" controls>
+  <source src="frutiger aero playlist 2.mp3 " type="audio/mp3">
+</audio>
+
+<div class="custom-play-button" onclick="playPause()"></div>
+
+<script>
+  var audio = document.getElementById('customAudio');
+
+  function playPause() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      margin: 50px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    #welcomeMessage {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #userName {
+      font-size: 20px;
+      font-weight: bold;
+      color: #3446c8;
+    }
+
+    #welcomeMessage2 {
+      margin-top: 40px;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="welcomeMessage">Welcome,</div>
+    <div id="userName">
+      <!-- JavaScript will populate this with the user's name -->
+    </div>
+  </div>
+
+  <script>
+    // Retrieve the user's name from the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const userName = urlParams.get('name');
+
+    // Display the user's name on the second page
+    const userNameElement = document.getElementById('userName');
+    if (userName) {
+      userNameElement.textContent = userName;
+    }
+  </script>
+<div id="welcomeMessage2">Enjoy your visit.</div>
+
+</body>
+</html>
+
+<style>
+  .undo {
+    position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 80px;
+      height: 80px;
+  }
+</style>
+
+<style>
+  .undo:hover {
+    filter: brightness(0.8);
+  }
+</style>
+
+<a href="website.html">
+  <img src="homepage1.gif" alt="undo" class="undo">
+  
+</a>
+
+<style>
+  
+  .face {
+      position: absolute;
+      top: 100px;
+      left: 870px;
+      width: 570px;
+      height: auto;
+      opacity: 0.2;
+      z-index: 0;
+      transform: scaleX(-1);
+      
+  }
+</style>
+
+<img class="face" src="./Face.png" alt="face" />
+
+<style>
+  .icon1 {
+    position: absolute;
+      top: 300px;
+      left: 400px;
+      width: 200px;
+      height: auto;
+  }
+</style>
+
+<style>
+  .icon1:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+</style>
+
+<a href="website2.html">
+  <img src="icon1.png" alt="icon1" class="icon1">
+</a>
+
+<style>
+  .icon2 {
+    position: absolute;
+      top: 320px;
+      left: 800px;
+      width: 200px;
+      height: auto;
+      transform: rotate(40deg);
+  }
+</style>
+
+<style>
+  .icon2:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+</style>
+
+<a href="website3.html">
+  <img src="camera.png" alt="icon2" class="icon2">
+</a>

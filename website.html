@@ -1,91 +1,24 @@
+<title>Enter your name</title>
 
-<style>
-  body {
-      background: linear-gradient(to right, rgb(197, 197, 255), white, rgb(198, 255, 170));
-  }
+<head>
+  <style>
+    body {
+        background-image: url(background1.png); 
+        background-size:cover; 
+        background-position:top; 
+        background-repeat:initial; 
+        height: 100vh; 
+        padding: 0;    /* 重置页面的内边距 */
+        overflow-x: hidden;
+        margin: 0; 
+        
+    }
 </style>
-
-
-</style>
-
-
-<style>
-  .shadow {
-      font-weight: bold;
-      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      font-size: 200px; 
-      color: transparent;
-      background: linear-gradient(to bottom, rgb(255, 255, 255),#f3f3f3ce, rgb(255, 255, 255));
-      text-shadow: 3px 3px 0px rgba(0, 6, 114, 0.2);
-      font-style: italic;
-      transform: rotate(-6deg);
-      margin-top: 100px;
-      margin-left: -40px;
-      opacity: 0.5;
-      -webkit-background-clip: text; /* Clip the background to the text content (for WebKit/Blink browsers) */
-      background-clip: text; /* Clip the background to the text content */
-  }
-  
-  </style>
-  
-  
-  <div class="shadow">
-    FRUITIGER AERO
-  </div>
-
-<style>
-.text {
-    font-weight: bold;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 200px; 
-    color: transparent;
-    background: linear-gradient(to bottom, rgb(0, 34, 255),#f3f3f3ce, rgb(19, 46, 219));
-    text-shadow: 3px 3px 0px rgba(0, 6, 114, 0.2);
-    font-style: italic;
-    transform: rotate(-6deg);
-    margin-top: -280px;
-    -webkit-background-clip: text; /* Clip the background to the text content (for WebKit/Blink browsers) */
-    background-clip: text; /* Clip the background to the text content */
-}
-.text:hover {
-  opacity: 0.8;
-}
-
-</style>
-
-
-<div class="text">
-  FRUITIGER AERO
-</div>
-
-
-<style>
-
-  .phone {
-      position: absolute;
-      top: 340px;
-      left: 0px;
-      width: 326.7px;
-      height: 666.7px;
-  }
-</style>
-
-<img class="phone" src="./phone.png" alt="phone" />
+</head>
 
 
 
-<style>
-  .figure1 {
-      position: absolute;
-      top: 380px;
-      left: 950px;
-      width: 415px;
-      height: 1309px;
-      
-  }
-</style>
 
-<img class="figure1" src="./figure1.png" alt="figure1" />
 
 <style>
 .image-container {
@@ -95,57 +28,107 @@
 
 <div class="image-container">
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .background {
-        position: absolute;
-        top: 170px;
-        left: 350px;
-        opacity: 0.7;
-        width: 455px;
-        height: 568px;
+    body {
+      font-family:'Courier New', Courier, monospace;
+      text-align: center;
+      margin: 50px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    #title {
+      font-size: 60px;
+      margin-bottom: 10px;
+      display: inline-block;
+    transform-origin: center;
+    position: relative;
+    font-weight: bold;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: transparent;
+    background: linear-gradient(to bottom, rgb(0, 34, 255),#f3f3f3ce, rgb(19, 46, 219));
+    text-shadow: 3px 3px 0px rgba(0, 6, 114, 0.2);
+    font-style: italic;
+    transform: rotate(-6deg);
+    margin-top: 65px;
+    margin-left: -550px;
+    -webkit-background-clip: text; /* Clip the background to the text content (for WebKit/Blink browsers) */
+    background-clip: text; /* Clip the background to the text content */
+    z-index: 3;
+    font-weight:bolder; /* 加粗 */
+ text-shadow: 1px 1px 1px #000 ，
+              -1px -1px 1px #fff;
+    }
+
+    #subtitle {
+      font-size: 16px;
+      margin-bottom: 30px;
+      margin-top: 150px;
+      z-index: 4;
+    }
+
+    #nameInput {
+      font-family: 'Courier New', Courier, monospace;
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 20px;
+      z-index: 4;
+    }
+
+
+    #enterButton {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #3446c8;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      z-index: 4;
     }
   </style>
-  
-  <img class="background" src="./background.jpeg" alt="background" />
+</head>
+<body>
 
-  <style>
-    .text2 {
-        position: absolute;
-        font-weight: bold;
-        font-family:'Courier New', Courier, monospace;
-        font-size: 16px; 
-        color: black;
-        margin-top: 450px;
-        margin-left: 560px;
+  <div class="container">
+    <div id="title">THIS IS THE PAST AND THE FUTURE.</div>
+    <div id="subtitle">Your Name</div>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="enterButton" onclick="redirectToSecondPage()">Enter</button>
+  </div>
+
+  <script>
+    function redirectToSecondPage() {
+      const nameInput = document.getElementById('nameInput').value;
+      window.location.href = `Welcome!.html?name=${encodeURIComponent(nameInput)}`;
     }
-    </style>
-    
-    
-    <div class="text2">
-      This path will lead you to your <br>currently unconscious passion <br>and it will bring you great <br>contentment with the present.
-    </div>
+  </script>
+
+</body>
+</html>
+
 
 <style>
-  .figure2 {
-      position: absolute;
-      top: 630px;
-      left: 550px;
-      width: 423px;
-      height: 633px;
-      
-  }
-</style>
-
-<img class="figure2" src="./Figure_2.png" alt="figure2" />
-
-<style>
+  
   .face {
       position: absolute;
-      top: 300px;
-      left: -30px;
-      width: 786px;
-      height: 1087.5px;
+      top: 50px;
+      left: 830px;
+      width: 570px;
+      height: auto;
       opacity: 0.2;
+      z-index: 0;
+      transform: scaleX(-1);
       
   }
 </style>
