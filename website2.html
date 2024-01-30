@@ -505,7 +505,25 @@ audio::-webkit-media-controls {
     height: auto;
     z-index: 1;
   }
+  
+  .youtube-player3 {
+    position: absolute;
+    top: 4266px;  
+    left: 107px;  
+    width: 398px; 
+    height: 262px;
+    z-index: 1;
+  }
 
+  .image-overlay3 {
+    position: absolute;
+      top: 4230px;
+      left: 40px;
+      width: 60%; 
+      height: auto;
+      z-index: 0;
+     
+    }
   </style>
 
 
@@ -535,7 +553,18 @@ audio::-webkit-media-controls {
         'rel': 0,
         'showinfo': 0
       }
-      
+
+    });
+      var player3 = new YT.Player('youtube-player3', {
+      height: '100%',
+      width: '100%',
+      videoId: '-u77XdL8_B4',
+      playerVars: {
+        'autoplay': 0,
+        'controls': 1,
+        'rel': 0,
+        'showinfo': 0
+      }
     });
   }
     </script>
@@ -551,6 +580,13 @@ audio::-webkit-media-controls {
   <div class="media-container">
     <div id="youtube-player2" class="youtube-player2"></div>
     <img class="image-overlay2" src="player.png" alt="Image 2">
+  </div>
+
+</script>
+<div class="container">
+  <div class="media-container">
+    <div id="youtube-player3" class="youtube-player3"></div>
+    <img class="image-overlay3" src="player3.png" alt="Image 3">
   </div>
 
   <style>
@@ -801,15 +837,16 @@ audio::-webkit-media-controls {
      </style>
 
   <img class="figure2" src="Figure_2.png" alt="figure2">
-
+  
   <style>
     .text3 {
       position: absolute;
-      top: 5400px;
-      left: 380px;
-      width: 90%; 
+      top: 5320px;
+      left: 370px;
+      width: 150%; 
       height: auto;
       z-index: 0;
+      opacity: 0.6;
      
     }
   
