@@ -9,7 +9,7 @@
         background-position:top; 
         background-repeat:initial; 
         height: 100vh; 
-        padding: 0;    /* 重置页面的内边距 */
+        padding: 0;   
         overflow-x: hidden;
         margin: 0; 
         
@@ -50,12 +50,12 @@ audio::-webkit-media-controls {
   position: absolute;
   width: 50px; /* 自定义按钮宽度 */
   height: 50px; /* 自定义按钮高度 */
-  background: url('audio.png') no-repeat center center; /* 替换为您的播放按钮图片路径 */
+  background: url('audio.png') no-repeat center center; 
   background-size: cover;
   cursor: pointer;
   left: 1360px;
   top: 30px;
-  animation: rotateAnimation 3s steps(100) infinite; /* 设置动画效果，2s表示动画时长，infinite表示无限循环 */
+  animation: rotateAnimation 3s steps(100) infinite;
   transition: filter 0.1s;
 }
 .custom-play-button:hover {
@@ -187,6 +187,7 @@ audio::-webkit-media-controls {
       left: 400px;
       width: 200px;
       height: auto;
+      transition: transform 0.3s ease; 
   }
 </style>
 
@@ -194,8 +195,10 @@ audio::-webkit-media-controls {
   .icon1:hover {
     cursor: pointer;
     opacity: 0.8;
+    transform: translateY(-5px);
   }
 </style>
+
 
 <a href="website2.html">
   <img src="icon1.png" alt="icon1" class="icon1">
@@ -209,6 +212,7 @@ audio::-webkit-media-controls {
       width: 200px;
       height: auto;
       transform: rotate(40deg);
+      transition: transform 0.3s ease; 
   }
 </style>
 
@@ -216,8 +220,10 @@ audio::-webkit-media-controls {
   .icon2:hover {
     cursor: pointer;
     opacity: 0.8;
+    transform: translateY(-5px);
   }
 </style>
+
 
 <a href="website3.html">
   <img src="camera.png" alt="icon2" class="icon2">
