@@ -111,6 +111,7 @@ audio::-webkit-media-controls {
     width: 60%; 
     height: auto;
     z-index: 0;
+    animation: floatAnimation 2s ease-in-out infinite; 
   }
   
   </style>
@@ -130,7 +131,6 @@ audio::-webkit-media-controls {
   .pic1:hover {
     filter: brightness(0.6);
     cursor: pointer;
-    animation: floatAnimation 2s ease-in-out infinite; 
   }
 </style>
   
@@ -367,6 +367,7 @@ audio::-webkit-media-controls {
           width: 50%; 
           height: auto;
           z-index: 1;
+          animation: floatAnimation 2s ease-in-out infinite; 
         }
       
         </style>
@@ -385,7 +386,6 @@ audio::-webkit-media-controls {
   <style>
           .pic13:hover {
             cursor: pointer;
-              animation: floatAnimation 2s ease-in-out infinite; 
         filter: brightness(0.6);
         }
        </style>
@@ -697,9 +697,21 @@ audio::-webkit-media-controls {
       height: auto;
       z-index: 1;
       transition: transform 0.3s ease; 
+      animation: floatAnimation 2s ease-in-out infinite; 
     }
   
     </style>
+
+  <style>
+  @keyframes floatAnimation {
+      0%, 100% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-10px);
+      }
+  }
+</style>
     
     <style>
       .pic20:hover {
@@ -708,7 +720,9 @@ audio::-webkit-media-controls {
       }
      </style>
 
-  <img class="pic20" src="20.png" alt="pic20">
+<a href="https://y2kaestheticinstitute.tumblr.com/post/163430926634/selections-from-virtual-beauty%E5%AE%8C%E5%85%A8%E7%BE%8E%E5%B0%91%E5%A5%B3%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9-magazine" target="_blank">
+  <img src="20.png" alt="pic20" class="pic20">
+  </a>
 
   <style>
     .pic21 {
@@ -845,7 +859,6 @@ audio::-webkit-media-controls {
         position: absolute;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
-        font-style: italic;
         font-size: 16px; 
         color: #ee9042;
         margin-top: 5700px;
